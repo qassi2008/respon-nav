@@ -1,0 +1,193 @@
+*{
+  background: url("../cover.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+body {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  position: relative; /* Add this line */
+  min-height: 100vh;
+
+}
+
+
+.navbar {
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  border: 2px solid;
+  border-radius: 80px  0 80px 0;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 5px 5px 5px rgba(220, 220, 220, 220);
+
+}
+
+.brand-title {
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-2px, 0px) rotate(1deg); }
+  30% { transform: translate(1px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-1px, 1px) rotate(0deg); }
+  70% { transform: translate(1px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.brand-title:hover {
+  animation: shake 0.9s; /* Apply the shake animation over 0.5 seconds */
+  animation-iteration-count: infinite; /* Repeat the animation indefinitely */
+}
+
+
+.navbar-links{
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-links ul {
+  list-style-type: none;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.navbar-links li {
+  display: inline;
+  margin: 0 10px;
+  background: rgba(0, 0, 0, 0.7);
+
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-links li a:hover {
+  background-color: #fff; /* Slight white background on hover for contrast */
+  color: #000; /* Change text color on hover */
+  margin: 10px;
+  border: 2px solid;
+  border-radius: 20px  20px 20px 20px;
+}
+.centered-text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px 70px;
+  font-size: 1.5em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid;
+  border-radius: 80px  10px 80px 10px;
+  box-shadow: 5px 5px 5px rgba(220, 220, 220, 220);
+}
+h1{
+  background: rgba(0, 0, 0, 0);
+  margin-top: -20px;
+}
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+
+  background: white;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 70px  30px 70px 30px;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    width: 100%;
+    margin: 10px 10px;
+  }
+
+  .toggle-button {
+    display: flex;
+    color: white;
+    margin: 10px 20px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    position: absolute; /* Fixed positioning */
+    top: 80px; /* Start from the top */
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for visibility */
+    z-index: 1000; /* Ensure it's above other content */
+    align-items: center; /* Center the items horizontally */
+    justify-content: center; /* Center the items vertically */
+    border: 2px solid;
+    border-radius: 80px  10px 80px 10px;
+    box-shadow: 5px 5px 5px rgba(220, 220, 220, 220);
+  }
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    display: block;
+    width: 90%;
+    margin: 10px;
+    border-radius: 80px  10px 80px 10px;
+
+  }
+  .navbar-links li a {
+    display: block; /* Display as block */
+    border-radius: 50px  10px 50px 20px;
+    margin: 10px;
+   padding-top: 10px;
+  }
+  .navbar-links li a:hover {
+    background-color: #ffffff; /* Slight white background on hover for contrast */
+    color: #000; /* Change text color on hover */
+    margin: 10px;
+
+  }
+}
